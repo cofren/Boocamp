@@ -12,5 +12,4 @@ let t=n1.concat(' ',n2);
 console.log(t);
 t=t.toString('');
 t=t.replaceAll(',',' ');
-
 console.log(t);
