@@ -8,9 +8,9 @@ console.log(length);
 if (wordbad > wordnot){
     let list = sentence.split("");
     console.log(list);
-    list.splice(wordnot,length + 4,"g","o","o","d"," ")
+    list.splice(wordnot,length + 4,"g","o","o","d"," ");
     console.log(list);
-    list.join(" ");
+    list.join("");
     console.log(list);
     
 }
