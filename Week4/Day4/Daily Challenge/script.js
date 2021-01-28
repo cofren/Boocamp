@@ -23,13 +23,3 @@ while (newNumber > falling) {
         console.log("Not enough bottles on beer on the wall to take down!")}
 }
 
-// if (newNumber = 1) {
-//     console.log("1 bottle of beer on the wall")
-// }
-// else {"Not enough bottles on beer on the wall to take down!"}
-
-
-
-// String 1,2,3: No of bottles
-
-// String 4: Take down

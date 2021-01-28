@@ -1,35 +1,70 @@
-// Daily Challenge 99 Bottles of Beer
+// Hangman Game
 
-// Ask user to enter the no. of bottles
+console.log("Hangman-Game");
 
-let number = prompt("How many bottles of Beer?");
+// Enter a word (exactly 8 letters) and display it and display it as stars (*).
 
-let falling = 1;
-let newNumber = number;
-console.log(newNumber + " bottles of beer on the wall");
-console.log(newNumber + " bottles of beer");
-console.log("Take " + falling + " down, pass it around");
+// declare global variables
 
-while (newNumber > falling) {
-    newNumber = newNumber - falling
-    falling = falling + 1;
-    console.log(newNumber + " bottles of beer on the wall");
-    console.log(newNumber + " bottles of beer");
-   
-    if (newNumber > falling) {
-        console.log("Take " + falling + " down, pass them around");
-    } 
-    else {
-        console.log("Not enough bottles on beer on the wall to take down!")}
+let hiddenWord;
+let wordLength;
+let letter;
+let regGuess;
+let regConstructor = new RegExp(regPattern, "g, i")
+
+
+// prompt word 8 letter
+function askWord () {
+        hiddenWord = prompt("Enter your secret word. At least 8 letters.");
+        wordLength = hiddenWord.length;
 }
 
-// if (newNumber = 1) {
-//     console.log("1 bottle of beer on the wall")
-// }
-// else {"Not enough bottles on beer on the wall to take down!"}
+// check if 8 letters
+function checkLetters () {
+        while ( wordLength < 8) {
+                hiddenWord = prompt("Your word needs to be at least 8 letters long. Please enter again");
+                wordLength = hiddenWord.length;
+        }
+}
+
+// display word as stars
+function stars() {
+        console.log("*".repeat(wordLength));
+}
+
+
+// Player 2 guess letters
+function guess () {
+        letter = prompt("Please guess a letter");
+}
+
+
+// Check if letter in hidden word
+regPattern = "/"+guess+"/"
+
+
+askWord();
+checkLetters();
+stars();
+guess();
 
 
 
-// String 1,2,3: No of bottles
+console.log(hiddenWord);
+console.log(wordLength);
 
-// String 4: Take down
+// check if 8 letters. if not prompt again
+
+// Guess a letter. 10 guesses max. Wrong guess 1 life less
+
+
+
+// Check if letter in word
+// Check if letter was already used
+// If letter in word, change the or that star(s) to the letter.
+// If letter not in word show all letters that wrongly guessed
+
+
+// log success/failure
+
+
