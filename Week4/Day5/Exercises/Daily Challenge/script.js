@@ -1,25 +1,21 @@
-// Daily Challenge 99 Bottles of Beer
+// Daily Challenge Planets
 
-// Ask user to enter the no. of bottles
+const planets = ["Earth", "Mars", "Jupiter"];
+console.log(planets);
 
-let number = prompt("How many bottles of Beer?");
-
-let falling = 1;
-let newNumber = number;
-console.log(newNumber + " bottles of beer on the wall");
-console.log(newNumber + " bottles of beer");
-console.log("Take " + falling + " down, pass it around");
-
-while (newNumber > falling) {
-    newNumber = newNumber - falling
-    falling = falling + 1;
-    console.log(newNumber + " bottles of beer on the wall");
-    console.log(newNumber + " bottles of beer");
-   
-    if (newNumber > falling) {
-        console.log("Take " + falling + " down, pass them around");
-    } 
-    else {
-        console.log("Not enough bottles on beer on the wall to take down!")}
+for (i=0; i<planets.length; i++) {
+        let newElement = document.createElement("div");
+        newElement.className = "planet";
+        newElement.innerHTML = planets[i];
+        document.body.appendChild(newElement);
 }
+
+let planet1 = document.querySelectorAll("div")[0];
+planet1.style.backgroundColor = "red";
+
+let planet2 = document.querySelectorAll("div")[1];
+planet2.style.backgroundColor = "blue";
+
+let planet3 = document.querySelectorAll("div")[2];
+planet3.style.backgroundColor = "green";
 
