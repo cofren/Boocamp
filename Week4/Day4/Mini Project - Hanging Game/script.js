@@ -7,16 +7,18 @@ console.log("Hangman-Game");
 // declare global variables
 
 let hiddenWord;
+let wordArray;
 let wordLength;
 let letter;
 let regGuess;
-let regConstructor = new RegExp(regPattern, "g, i")
+// let regConstructor = new RegExp(regPattern, "g, i")
 
 
 // prompt word 8 letter
 function askWord () {
         hiddenWord = prompt("Enter your secret word. At least 8 letters.");
         wordLength = hiddenWord.length;
+       
 }
 
 // check if 8 letters
@@ -24,6 +26,7 @@ function checkLetters () {
         while ( wordLength < 8) {
                 hiddenWord = prompt("Your word needs to be at least 8 letters long. Please enter again");
                 wordLength = hiddenWord.length;
+                wordArray = hiddenWord.split("");
         }
 }
 

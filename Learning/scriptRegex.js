@@ -1,18 +1,40 @@
 // https://www.youtube.com/watch?v=VrT3TRDDE4M
 // https://www.youtube.com/watch?v=baTwIcyMvh8
 
+// It does not matter if the Regex is build through the Constructor or Literal Method
+// It becomes either way a RegEx Object.
+// Once it is a RegEx Object 2 Constructor Methods or 6 different String Methods can be used
+// Constructor: Regex, Method, String : reConstructor.test(str1))
+// String: String, Method, Regex: str1.search(reConstructor))
+
+let reLiteral;
 let reConstructor;
-let pattern;
+let pattern1;
+let pattern2;
 let flags;
 let str;
 
-pattern = "/^matchthis$/";
-pattern = "\\w+";
-flags = "i";
-str = "matchthis";
+// Constructor
 
-reConstructor = new RegExp(pattern, flags);
-console.log(reConstructor.test(str)) //
+pattern1 = "\\matchthis$";
+pattern2 = "\\w+";
+pattern3 = /matchthis/;
+pattern4 = "matchthis";
+pattern5 = /\d+/;
+flags = "i";
+str1 = "matchthis";
+
+// Constructor - RegexObjectMethod
+reConstructor = new RegExp(pattern4, flags);
+console.log(reConstructor.test(str1)) //
+
+// Constructor - StringObjectMethod
+
+// Literal - StringObjectMethod
+console.log(str1.search(pattern3))
+console.log(str1.search(reConstructor))
+
+console.log(pattern3.exec(str1))
 
 // Use cases
 
@@ -33,6 +55,8 @@ console.log(text.match(/(david)/ig));
 
 
 // Method	Description
+
+// Constructor or Literal
 
 
 // RegExp()
