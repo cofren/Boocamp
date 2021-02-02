@@ -37,9 +37,14 @@ function hideP() {
 }
 
 // get values from inputs and append inside a table
+// create attribute "value"
+document.querySelectorAll("input")[0].setAttribute("value", "");
+
 let userName = document.querySelectorAll("input")[0].value;
-userName.innerHTML = "hello";
-console.log(userName);
-let opinion = document.querySelectorAll("input")[1].value;
-console.log(opinion);
+document.write(userName);
+
+
+// console.log(userName);
+// let opinion = document.querySelectorAll("input")[1].value;
+// console.log(opinion);
 
